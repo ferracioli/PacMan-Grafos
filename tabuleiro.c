@@ -281,35 +281,8 @@ void fantMove(Tabuleiro **t, Grafo **g)
     int p = (x * lado) + y;               // Achando a posicao no tabuleiro (0,1,2,3,...,nVertices)
 
     int r = rand() % 4; // O fantasma tem seu direcionamento aleatorizado
-    
-    /* Usar essas 3 linhas se quiser controlar o fantasma manualmente */
-    /*printf("\nQual movimento do seu fantasma (0 = UP | 1 = RIGHT | 2 = DOWN | 3 = LEFT)? ");
-    scanf("%d", &r);
-    printf("\nMovendo -> %d\n\n", r);*/
 
-    /* Faz os checks para ver se o fantasma pode andar em certa direcao (USAR ELSE POIS O RANDOM DETERMINOU PARA ONDE ELE VAI) */
-    /*if (r == 0 && VerificaAresta(*g, p, p - lado) && x - 1 >= 0 && (*t)->matTabuleiro[x - 1][y] != -1)
-    {*/
-        /* Todos os if seguem a mesma ideia, so muda a posicao usada */
-        /*xAux = x - 1;
-        yAux = y;
-    }
-    else if (r == 1 && VerificaAresta(*g, p, p + 1) && y + 1 < lado && (*t)->matTabuleiro[x][y + 1] != -1)
-    {
-        xAux = x;
-        yAux = y + 1;
-    }
-    else if (r == 2 && VerificaAresta(*g, p, p + lado) && x + 1 < lado && (*t)->matTabuleiro[x + 1][y] != -1)
-    {
-        xAux = x + 1;
-        yAux = y;
-    }
-    else if (r == 3 && VerificaAresta(*g, p, p - 1) && y - 1 >= 0 && (*t)->matTabuleiro[x][y - 1] != -1)
-    {
-        xAux = x;
-        yAux = y - 1;
-    }*/
-
+    // Direcionamento do fantasma :
     char op = 'm';
     while (op != 'w' && op != 'a' &&  op != 's' && op != 'd')
     {
