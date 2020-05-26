@@ -32,12 +32,10 @@ int main()
 
     while (getPacPos(t, g) != getFantPos(t, g))
     {
+
         printTabu(t, anima);
         printf("\nMovimento do fantasma\n");
         fantMove(&t, &g);
-
-        // Troca de frame
-        anima*=-1;
 
         printTabu(t, anima);
         printf("\nMovimento do PacBoy\n\n");

@@ -164,7 +164,7 @@ void printTabu(Tabuleiro *t, int anima)
 
                     // PacMan com a boca fechada
                     else 
-                        printf("\033[1;33m%ls\033[0m", L"O  ");
+                        printf("\033[1;33m%ls\033[0m", L" O ");
                 }
                 else if (t->matTabuleiro[i][j] == 0)
                 {
@@ -189,7 +189,7 @@ void printTabu(Tabuleiro *t, int anima)
                     if(anima == 2)
                         printf("\033[1;33m%ls\033[0m", L" ᗧ ");
                     else 
-                        printf("%ls", L"O  ");
+                        printf("\033[1;33m%ls\033[0m", L" O ");
 
                 }
                 else {
